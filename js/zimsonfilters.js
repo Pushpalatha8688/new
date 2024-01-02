@@ -1,7 +1,7 @@
 function filterWatches() {
     
     const minPrice = parseInt(document.getElementById('currentValue').value) ||  Infinity;
-    const maxPrice = parseInt(document.getElementById('maxValue').value) ;
+    const maxPrice = parseInt(document.getElementById('maxValue').value)||7999 ;
 
    
     const selectedGender = document.querySelector('input[name="gender"]:checked');
@@ -11,9 +11,11 @@ function filterWatches() {
     const selectedCollections = document.querySelectorAll('input[name="collection"]:checked');
     const collectionValues = Array.from(selectedCollections).map(collection => collection.value);
 
+    const watches = Array.from(document.getElementsByClassName('watchesname'));
     
-    const filteredWatches = Array.from(document.getElementsByClassName('watchesname')).filter(watch => {
-        const price = parseInt(watch.getAttribute('data-price').replace('₹', '').replace(',', ''));
+    // const filteredWatches = Array.from(document.getElementsByClassName('watchesname')).filter(watch => {
+        watches.forEach(watch => {
+       const price = parseInt(watch.getAttribute('data-price').replace('₹', '').replace(',', ''));
         const gender = watch.getAttribute('data-gender');
         const collection = watch.getAttribute('data-collection');
         console.log(price);
@@ -22,13 +24,17 @@ function filterWatches() {
         const genderCondition = !genderValue || gender === genderValue;
         const collectionCondition = collectionValues.length === 0 || collectionValues.includes(collection);
 
-        console.log(priceCondition ,genderCondition,collectionCondition)
-        return priceCondition && genderCondition && collectionCondition;
+        
+        const shouldDisplay = priceCondition && genderCondition && collectionCondition;
+        watch.style.display = shouldDisplay ? 'block' : 'none';
+        
+        // console.log(priceCondition ,genderCondition,collectionCondition)
+        // return priceCondition && genderCondition && collectionCondition;
     });
 
-    Array.from(document.getElementsByClassName('watchesname')).forEach(watch => watch.style.display = 'none');
+    // Array.from(document.getElementsByClassName('watchesname')).forEach(watch => watch.style.display = 'none');
 
-    filteredWatches.forEach(watch => watch.style.display = 'block');
+    // filteredWatches.forEach(watch => watch.style.display = 'block');
 }
 
 document.getElementById('myRange').addEventListener('input', function () {
@@ -44,6 +50,9 @@ document.querySelectorAll('input[name="gender"]').forEach(gender => {
 document.querySelectorAll('input[name="collection"]').forEach(collection => {
     collection.addEventListener('change', filterWatches);
 });
+
+Array.from(document.getElementsByClassName('watchesname')).forEach(watch => watch.style.display = 'block');
+
 
 filterWatches();
 

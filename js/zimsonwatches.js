@@ -273,21 +273,23 @@ var isSignedUp = false;
           document.getElementById('cardDetailsPage').style.display = 'block';
         }
         function checkout() {
-          if (!isSignedUp) {
-              openSignupPanel();
-          } else {
-              document.getElementById('checkoutButton').innerText = 'Process';
-              toggleCardDetails(); 
-          }
+          if (cartItems.length === 0) {
+            alert('Your cart is empty. Add items to your cart before proceeding.');
+        } else if (!isSignedUp) {
+            openSignupPanel();
+        } else {
+            document.getElementById('checkoutButton').innerText = 'Process';
+            toggleCardDetails();
+        }
       }
-        function process() {
-         
-          if (!isSignedUp) {
-              openSignupPanel();
-          } else {
-              openCardDetailsPage();
-          }
-      
+      function process() {
+        if (cartItems.length === 0) {
+            alert('Your cart is empty. Add items to your cart before proceeding.');
+        } else if (!isSignedUp) {
+            openSignupPanel();
+        } else {
+            openCardDetailsPage();
+        }
     }
 
       function confirmLogout() {
@@ -395,57 +397,57 @@ var isSignedUp = false;
           return document.getElementById('cardNumber').checkValidity() && document.getElementById('cvv').checkValidity()
   }
   
-  function displayOrderConfirmation() {
-    // Create a div element for the order confirmation
-    var orderConfirmationDiv = document.createElement('div');
-    orderConfirmationDiv.classList.add('order-confirmation');
+//   function displayOrderConfirmation() {
+//     // Create a div element for the order confirmation
+//     var orderConfirmationDiv = document.createElement('div');
+//     orderConfirmationDiv.classList.add('order-confirmation');
 
-    // Create an image element
-    var confirmationImage = document.createElement('img');
-    confirmationImage.src = 'watches/icons/greentick-unscreen.gif'; 
+//     // Create an image element
+//     var confirmationImage = document.createElement('img');
+//     confirmationImage.src = 'watches/icons/greentick-unscreen.gif'; 
 
-    // Create a paragraph element
-    var confirmationText = document.createElement('p');
-    confirmationText.innerText = 'Thank you for your order! Your order has been placed successfully.';
+//     // Create a paragraph element
+//     var confirmationText = document.createElement('p');
+//     confirmationText.innerText = 'Thank you for your order! Your order has been placed successfully.';
 
-    // Create a button element
-    var homeButton = document.createElement('button');
-    homeButton.innerText = 'Go to Home Page';
-    homeButton.addEventListener('click', function () {
-        // Redirect to the home page when the button is clicked
-        window.location.href = './index.html'; // Replace with the actual path to your home page
-    });
+//     // Create a button element
+//     var homeButton = document.createElement('button');
+//     homeButton.innerText = 'Go to Home Page';
+//     homeButton.addEventListener('click', function () {
+//         // Redirect to the home page when the button is clicked
+//         window.location.href = './index.html'; // Replace with the actual path to your home page
+//     });
 
-    // Append elements to the orderConfirmationDiv
-    orderConfirmationDiv.appendChild(confirmationImage);
-    orderConfirmationDiv.appendChild(confirmationText);
-    orderConfirmationDiv.appendChild(homeButton);
+//     // Append elements to the orderConfirmationDiv
+//     orderConfirmationDiv.appendChild(confirmationImage);
+//     orderConfirmationDiv.appendChild(confirmationText);
+//     orderConfirmationDiv.appendChild(homeButton);
 
-    // Append the orderConfirmationDiv to a container in your HTML (replace 'confirmationContainer' with the actual container ID)
-    var confirmationContainer = document.getElementById('confirmationContainer');
-    confirmationContainer.innerHTML = ''; 
-    confirmationContainer.appendChild(orderConfirmationDiv);
-}
+//     // Append the orderConfirmationDiv to a container in your HTML (replace 'confirmationContainer' with the actual container ID)
+//     var confirmationContainer = document.getElementById('confirmationContainer');
+//     confirmationContainer.innerHTML = ''; 
+//     confirmationContainer.appendChild(orderConfirmationDiv);
+// }
 
-function placeOrder() {
-    if (validateForm()) {
+// function placeOrder() {
+//     if (validateForm()) {
+//         cartItems = [];
+//         updateCartIcon();
+//         saveCartToLocalStorage();
+//         displayOrderConfirmation(); 
+//     }
+// }
+
+  
+  function placeOrder() {
+      if (validateForm()) {
         cartItems = [];
         updateCartIcon();
         saveCartToLocalStorage();
-        displayOrderConfirmation(); 
-    }
-}
-
-  
-  // function placeOrder() {
-  //     if (validateForm()) {
-  //       cartItems = [];
-  //       updateCartIcon();
-  //       saveCartToLocalStorage();
-  //         alert('Order placed successfully!');
-  //         window.location.href = './zimson.html'; 
-  //     }
-  // }
+          alert('Order placed successfully!');
+          window.location.href = './zimson.html'; 
+      }
+  }
   
   
 
