@@ -673,7 +673,7 @@ img {vertical-align: middle;}
  top:30px;
 }
   .active, .dot:hover{
-  background-color:beige;
+  background-color:#333;
   padding:0;
   margin:0;
 }
@@ -1043,7 +1043,40 @@ img {vertical-align: middle;}
 }
 
 
-
+.order-confirmation {
+    text-align: center;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    margin: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .order-confirmation img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+  }
+  
+  .order-confirmation p {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  
+  .order-confirmation button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* Style to hide the content before order confirmation */
+  .content-before-order {
+    display: none;
+  }
+  
 
 
 @keyframes marquee-animation {

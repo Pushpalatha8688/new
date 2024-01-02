@@ -395,16 +395,57 @@ var isSignedUp = false;
           return document.getElementById('cardNumber').checkValidity() && document.getElementById('cvv').checkValidity()
   }
   
-  
-  function placeOrder() {
-      if (validateForm()) {
+  function displayOrderConfirmation() {
+    // Create a div element for the order confirmation
+    var orderConfirmationDiv = document.createElement('div');
+    orderConfirmationDiv.classList.add('order-confirmation');
+
+    // Create an image element
+    var confirmationImage = document.createElement('img');
+    confirmationImage.src = 'watches/icons/greentick-unscreen.gif'; 
+
+    // Create a paragraph element
+    var confirmationText = document.createElement('p');
+    confirmationText.innerText = 'Thank you for your order! Your order has been placed successfully.';
+
+    // Create a button element
+    var homeButton = document.createElement('button');
+    homeButton.innerText = 'Go to Home Page';
+    homeButton.addEventListener('click', function () {
+        // Redirect to the home page when the button is clicked
+        window.location.href = './index.html'; // Replace with the actual path to your home page
+    });
+
+    // Append elements to the orderConfirmationDiv
+    orderConfirmationDiv.appendChild(confirmationImage);
+    orderConfirmationDiv.appendChild(confirmationText);
+    orderConfirmationDiv.appendChild(homeButton);
+
+    // Append the orderConfirmationDiv to a container in your HTML (replace 'confirmationContainer' with the actual container ID)
+    var confirmationContainer = document.getElementById('confirmationContainer');
+    confirmationContainer.innerHTML = ''; 
+    confirmationContainer.appendChild(orderConfirmationDiv);
+}
+
+function placeOrder() {
+    if (validateForm()) {
         cartItems = [];
         updateCartIcon();
         saveCartToLocalStorage();
-          alert('Order placed successfully!');
-          window.location.href = './zimson.html'; 
-      }
-  }
+        displayOrderConfirmation(); 
+    }
+}
+
+  
+  // function placeOrder() {
+  //     if (validateForm()) {
+  //       cartItems = [];
+  //       updateCartIcon();
+  //       saveCartToLocalStorage();
+  //         alert('Order placed successfully!');
+  //         window.location.href = './zimson.html'; 
+  //     }
+  // }
   
   
 
