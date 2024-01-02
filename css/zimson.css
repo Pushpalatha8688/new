@@ -68,9 +68,9 @@
     overflow: hidden;
     display:flex;
     justify-content: space-between;
-    position: fixed;
+    /* position: fixed;
     z-index: 3;
-    width:100%;
+    width:100%; */
     /* white-space: nowrap; */
   }
   
