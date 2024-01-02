@@ -32,13 +32,23 @@ updateSignupIcon();
        
           cartItems.push(item);
           displayCartItems();
+         
+          updateButtonColor(true);
+
       }
   
       updateCartIcon();
       saveCartToLocalStorage();
-      showMessage('Item added to cart!');
+      // showMessage('Item added to cart!');
       
   }
+
+function updateButtonColor(isAdded) {
+  var addButton = document.getElementById('addToCartButton'); // Change 'addToCartButton' to the actual ID of your button
+  if (addButton) {
+      addButton.style.backgroundColor = isAdded ? 'green' : ''; // Change to your desired colors
+  }
+}
  
   function updateCartIcon() {
       var cartIcon = document.getElementById('cartIcon');
@@ -138,6 +148,7 @@ function deleteItem(index) {
     updateCartIcon();
     saveCartToLocalStorage();
     displayCartItems();
+    updateButtonColor(false);
 }
 
 
