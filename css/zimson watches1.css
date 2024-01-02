@@ -130,7 +130,13 @@ body{
     font-size: larger;
     
    } */
- 
+   .collection::-webkit-scrollbar,
+   .collectionname::-webkit-scrollbar,
+   .brandname::-webkit-scrollbar,
+   .gender::-webkit-scrollbar {
+       display: none;
+   }
+
    .collection{
      display:flex;
      flex-direction: column;
@@ -146,6 +152,22 @@ body{
     overflow:scroll;
     margin:0;
     padding:0;
+   }
+   .clearb{
+    display: flex;
+    justify-content: flex-end;
+    align-items: stretch;
+    flex-direction: row;
+    width: 100%;
+   }
+   .clearimg{
+    width:30px;
+    height:30px;
+   }
+   #clearFiltersButton{
+    border:none;
+    border-radius: 10px;
+    background: transparent;
    }
    .gender{
     display:flex;

@@ -1,7 +1,9 @@
 function filterWatches() {
+    const minValueInput = document.getElementById('currentValue');
+    const maxValueInput = document.getElementById('maxValue');
     
-    const minPrice = parseInt(document.getElementById('currentValue').value) ||  Infinity;
-    const maxPrice = parseInt(document.getElementById('maxValue').value)||7999 ;
+    const minPrice = parseInt(minValueInput.value) || minValueInput.placeholder || 7994;
+    const maxPrice = parseInt(maxValueInput.value) || maxValueInput.placeholder || Infinity;
 
    
     const selectedGender = document.querySelector('input[name="gender"]:checked');
@@ -28,7 +30,7 @@ function filterWatches() {
         const shouldDisplay = priceCondition && genderCondition && collectionCondition;
         watch.style.display = shouldDisplay ? 'block' : 'none';
         
-        // console.log(priceCondition ,genderCondition,collectionCondition)
+         console.log(priceCondition ,genderCondition,collectionCondition)
         // return priceCondition && genderCondition && collectionCondition;
     });
 
@@ -37,9 +39,43 @@ function filterWatches() {
     // filteredWatches.forEach(watch => watch.style.display = 'block');
 }
 
+function clearFilters() {
+    // Clear price range inputs
+    document.getElementById('currentValue').value = '';
+    document.getElementById('maxValue').value = '';
+    
+    // Clear gender selection
+    document.querySelectorAll('input[name="gender"]').forEach(gender => gender.checked = false);
+
+    // Clear collection selection
+    document.querySelectorAll('input[name="collection"]').forEach(collection => collection.checked = false);
+
+    // Reset slider to its minimum value
+    document.getElementById('myRange').value = document.getElementById('myRange').min;
+
+    // Trigger the filter function to update the display
+    filterWatches();
+}
+
+// Add an event listener to a button or element that triggers the clearFilters function
+document.getElementById('clearFiltersButton').addEventListener('click', clearFilters);
 document.getElementById('myRange').addEventListener('input', function () {
  var sliderValue = this.value;
     document.getElementById('currentValue').value = sliderValue;
+    filterWatches();
+});
+
+document.getElementById('currentValue').addEventListener('input', function () {
+    var inputValue = parseFloat(this.value);
+    var slider = document.getElementById('myRange');
+    
+    if (!isNaN(inputValue) && inputValue >= parseFloat(slider.min) && inputValue <= parseFloat(slider.max)) {
+        slider.value = inputValue;
+        filterWatches();
+    }
+});
+
+document.getElementById('maxValue').addEventListener('input', function () {
     filterWatches();
 });
 
