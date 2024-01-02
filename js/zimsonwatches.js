@@ -36,7 +36,7 @@ updateSignupIcon();
   
       updateCartIcon();
       saveCartToLocalStorage();
-     alert('Item added to cart!');
+      showMessage('Item added to cart!');
       
   }
  
