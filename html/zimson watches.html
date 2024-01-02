@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Zimson Watches</title>
+        <link rel="stylesheet" href="../css/zimson watches1.css">
+        <link rel="stylesheet" href="../css/zimson.css">
+        <link rel="stylesheet" href="../css/zimson testing.css">
+        <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+        <script src="../js/zimson_search.js"  ></script>          
+    </head>
+    <body>
+        <div class="template1">
+            <div class="header">
+                <div class="find">
+                    <p> Find A Showroom</p>
+                </div>
+                <div class="logo">
+                    <a href="../index.html" target="_self">
+                    <img src="../zimson-logo-png_b1a82083-087a-4059-873e-20306d20174f.avif" class="image1">
+                    </a>
+                </div>
+        </div>
+           <div class="navbar">
+                <div class="watches">
+                    <ul>
+                        <div class="bar">
+                        <li> <a href="#ROLEX">ROLEX</a></li>
+                          <li class="dropdown">
+                            <a class="dropbtn" href="#BRANDS">BRANDS</a>
+                            <ul class="dropdown-content">
+                              <div class="Brand">
+                                <div class="column">
+                                 <li><a href="#"><h2 style="color:olivedrab">AllBrands</h2></a></li>
+                                 <li><a href="#">Alba</a></li>
+                                 <li><a href="#">Anne Klein</a></li>
+                                 <li><a href="#">Armani Exchange</a></li>
+                                 <li><a href="#">Balmain</a></li>
+                                 <li><a href="#">Bfit</a></li>
+                                 <li><a href="#">Calvin Klein</a></li>
+                                 <li><a href="#">Casio</a></li>
+                                 </div>
+                                 <div class="column">
+                                 <li><a href="#">Daniel Wellington</a></li>
+                                 <li><a href="#">Emporio Aarmani</a></li>
+                                 <li><a href="#">Fossil</a></li>
+                                 <li><a href="#">Gucci</a></li>
+                                 <li><a href="#">Guess</a></li>
+                                 <li><a href="#">Helix</a></li>
+                                 <li><a href="#">Kenneth Cole</a></li>
+                                 <li><a href="#">Longies</a></li>
+                                 </div>
+                                 <div class="column">
+                                 <li><a href="#">Michale Kors</a></li>
+                                 <li><a href="#">Omega</a></li>
+                                 <li><a href="#">Police</a></li>
+                                 <li><a href="#">Rado</a></li>
+                                 <li><a href="#">Seiko</a></li>
+                                 <li><a href="#">Seven Friday</a></li>
+                                 <li><a href="#">Timer</a></li>
+                                 </div>
+                                 <div class="column-img">
+                                  <li><a href="#"><img src="../watches/breitling-menu-img.webp"  class="image2"></a></li>
+                                </div>
+                                </div> 
+                            </ul>
+                        </li>
+                        <li><a href="#BUY ONLINE">BUY ONLINE</a></li>
+                        <li><a href="#SMART WATCH">SMART WATCH</a></li>
+                        <li class="dropdown">
+                          <a class="dropbtn" href="#WATCH FINDER">WATCH FINDER</a>
+                            <ul class="dropdown-content">
+                              <div class="Brand1">
+                                <div class="watchtext">
+                                    <li> <a href="#"><h2 style="color:rgb(233, 162, 112)"> By Gender</h2></a></li>
+                                    <li> <a href="#">Watches For Men</a></li>
+                                    <li> <a href="#">Watches For Women</a></li>
+                                    <li> <a href="#">Unisex Watches</a></li>    
+                                </div>
+                                <div class="watchimg">
+                                 <img src="../watches/for_her.webp" class="image2">
+                                 <img src="../watches/for_him.webp"  class="image2">
+                                 <img src="../watches/watch/Most_selling_1.webp"  class="image2">
+                                </div>
+                                </div>
+                            </ul>
+                        </li>
+                        <li><a href="#SHOWROOMS">SHOWROOMS</a></li>
+                        <li><a href="#SERVICE">SERVICE</a></li>
+                    </div>
+                    <div class="bar1">
+                      <div class="search-container  image-container">
+                        <li><a href="#" id="searchIcon"  class="image-container" onclick="toggleSearchPanel()"><img src="../watches/icons/download (2).png" alt="Search" title="Search" /></a></li>
+                      </div>
+                      <div id="signupContainer" class="image-container">
+                        <li><a href="#" id="signupIcon" class="image-container" onclick="toggleSignupPanel()"><img src="../watches/icons/download (13).png"  title="Signup" />
+                          <button id="logoutButton" onclick="logout()" style="display:none;">Logout</button>
+                        </a></li>
+                      </div>   
+                         <!-- <li><a href="zimson sign up.html" target="_self"><img src="./download (13).png"></a></li> -->
+                      <li><a href="#" class="heart"></a></li>
+                      <div class="container  image-container" >
+                        <li><a href="#" id="cart" class="shopping image-container" onclick="openCart()"><img src="../watches/icons/download (14).png" title="Cart" />
+                            <span id="cartIcon">0</span></a></li>
+                    </div>
+
+                         
+                         
+                         <div class="search-panel" id="searchPanel" style="display:none">
+                          <span id="closeSearch" onclick="toggleSearchPanel()">&times;</span>
+                          <h1 class="search-head">Search Our Site</h1>
+                          <input type="text" id="searchInput" placeholder="Search...">
+                          <button onclick="performSearch()"><img src="../watches/icons/download (26).png"></button>
+                          <div id="searchResults" class="search-results">
+                          </div>
+                        </div>
+
+                        <div id="sidePanel" class="side-panel">
+                          <span class="close-btn" onclick="closeSidePanel()">&times;</span>
+                          <h2>Shopping Cart</h2>
+                          <div id="cartItems" class="cart-items"></div>
+                          <hr>
+                          <div id="cartTotal" class="cart-total"></div>
+                          <div class="cart-actions">
+                              <button id="checkoutButton" onclick="checkout()" class="checkout-button">Checkout</button>
+                              <button onclick="closeSidePanel()" class="close-button">Close</button>
+                          </div>
+                      </div>
+
+                        <div  class="signup-panel" id="signuppanel" style="display:none">
+                          <span id="closesignup" onclick="toggleSignupPanel()">&times;</span>
+                          <div class="singup1">
+                          <h1 class="sign-head"> SIGN UP</h1>
+                          <input type="email" id="email" placeholder="Enter your email">
+                          <input type="password" id="password" placeholder="Enter your password">
+                          <br>
+                          <a href="#" onclick="forgotPassword()">Forgot Password?</a>
+                          <button onclick="signup()">Sign Up</button>
+                          <span id="closesignup" onclick="toggleSignupPanel()">&times;</span>
+                          </div>
+                      </div>
+                      <div id="message">Logout successful!</div>
+                
+                      <div class="card-details" id="cardDetailsPage" style="display: none;">
+                        <span id="closesignup"onclick="toggleCardDetails()">&times;</span>
+                        <h2>Card Details</h2>
+                        <label for="cardNumber">Card Number:</label>
+                        <input type="number" id="cardNumber" name="cardNumber" maxlength="16">
+                        <br>
+                        <label for="cvv">CVV:</label>
+                        <input type="number" id="cvv" name="cvv" maxlength="3">
+                        <br>
+                        <button onclick="placeOrder()">Place Order</button>
+                    </div>
+                  </div>
+                    </ul>
+                </div>
+            </div>
+            <div class="data" style="position:relative;">
+                <div class="image5">
+                    <img src="../watches/watch/fossil/fossil-2.webp">
+                    <div class="imagetext">
+                        <h1>Authorised Retailer For Fossil</h1>
+                    </div>
+                </div>
+                <div class="items">
+                    <div class="items-left">
+
+                        <div class="pricebar">
+                            <h2 class="title">Price</h2>
+    
+                            <div class="slidecontainer">
+                                <div id="priceFilter">
+                                  <input type="range" min="0" max="19995" value="0" class="slider" id="myRange">
+                                </div>  
+                                <div class="value-box">
+                                    <input type="number" class="current-value" id="currentValue"  value="0"> 
+                                    <input type="number" class="max-value" id="maxValue" value="19998">
+                                </div>
+                                
+                            </div>
+                        </div>
+                        <div class="gender">
+                            <h2 class="title">Gender</h2>
+                            <div class="gendername">
+                                <label><input type="checkbox" name="gender" value="men"> Men</label>
+                                <label><input type="checkbox" name="gender" value="women"> Women</label>
+                            </div>
+                        </div>
+                        <div class="collection" style=".collection::-webkit-scrollbar,
+                        .collectionname::-webkit-scrollbar,
+                        .brandname::-webkit-scrollbar,
+                        .gender::-webkit-scrollbar{ 
+                            display: none;}
+                        ">
+                            <h2 class="title">Collection</h2>
+                            <div class="collectionname">                                                                                      
+                                <label><input type="checkbox" class="collection-checkbox" name="collection" value="Autocross"> Autocross</label>
+                                <label><input type="checkbox" class="collection-checkbox" name="collection" value="Bannon">Bannon</label>
+                                <label><input type="checkbox" class="collection-checkbox" name="collection" value="Brox">Brox</label>
+                                <label><input type="checkbox" class="collection-checkbox" name="collection" value="Carlie mini">Carlie Mini</label>
+                                <label><input type="checkbox" class="collection-checkbox" name="collection" value="Eevie">Eevie</label>
+                                <label><input type="checkbox" class="collection-checkbox" name="collection" value="FB-01">FB-01</label>
+                                <label><input type="checkbox" class="collection-checkbox" name="collection" value="Fenmore">Fenmore</label>
+                                <label><input type="checkbox" class="collection-checkbox" name="collection" value="Gabby">Gabby</label>
+                                <label><input type="checkbox" class="collection-checkbox" name="collection" value="Janice">Janice</label>
+                                <label><input type="checkbox" class="collection-checkbox" name="collection" value="Kerrigan">Kerrigan</label>
+                                <label><input type="checkbox" class="collection-checkbox" name="collection" value="Laney">Laney</label>
+                                <label><input type="checkbox" class="collection-checkbox" name="collection" value="Lexie Luther">Lexie Luther</label>
+                                <label><input type="checkbox" class="collection-checkbox" name="collection" value="Luther">Luther</label>
+                                <label><input type="checkbox" class="collection-checkbox" name="collection" value="Lux Luther">Lux Luther</label>
+                                <label><input type="checkbox" class="collection-checkbox" name="collection" value="Modern Courier">Modern Courier</label>
+                                <label><input type="checkbox" class="collection-checkbox" name="collection" value="Modern Sophisticate">Modern Sophisticate</label>
+                                <label><input type="checkbox" class="collection-checkbox" name="collection" value="Redding">Redding</label>
+                                <label><input type="checkbox" class="collection-checkbox" name="collection" value="Reid">Reid</label>
+                                <label><input type="checkbox" class="collection-checkbox" name="collection" value="Rye">Rye</label>
+                                <label><input type="checkbox" class="collection-checkbox" name="collection" value="Stella">Stella</label>
+                                <label><input type="checkbox" class="collection-checkbox" name="collection" value="Sullivan">Sullivan</label>
+                                <label><input type="checkbox" class="collection-checkbox" name="collection" value="Tillie">Tillie</label>
+                                <label><input type="checkbox" class="collection-checkbox" name="collection" value="Yorke">Yorke</label>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="items-right">
+                        <div class="watch">
+                            <div class="watchesname"  data-name="Reid Gold " data-gender="women" data-collection="Reid Gold"  data-price="₹7,995" >
+                                <a href="./html/zimson testing.html" target="_self">
+                                <img src="../watches/watch/fossil/BQ3655I.webp"></a>
+                                <p>Fossil</p>
+                                <p class="name"> Fossil Reid Gold Dial Women </p>
+                                <P>  ₹7,995 </p> 
+                                <button   id="Cart" onclick="addToCart('Fossil Reid Gold Dial Women36mm','₹7,995','../watches/watch/fossil/BQ3655I.webp')" class="cart">Add To Cart</button>     
+                            </div>
+                            <div class="watchesname" data-name=" Autocross " data-gender="men"  data-collection="Autocross" data-price="₹9,995"  >
+                                <img src="../watches/watch/fossil/BQ2551I.webp">
+                                <p>Fossil</p>
+                                <p class="name">Fossil Autocross Black Dial Men 44mm</p>
+                                <P> ₹9,995</p> 
+                                <button   id="Cart" onclick="addToCart( 'Fossil Autocross Black Dial Men 44mm','₹9,995', '../watches/watch/fossil/BQ2551I.webp')" class="cart">Add To Cart</button>     
+                            </div>
+                            <div class="watchesname" data-name=" Bannon" data-gender="men" data-collection="Bannon" data-price="₹9,995" >
+                                <img src="../watches/watch/fossil/BQ2539I.webp">
+                                <p>Fossil</p>
+                                <p class="name">Fossil Bannon Green Dial Men 44mm</p>
+                                <P> ₹9,995</p> 
+                                <button   id="Cart" onclick="addToCart('Fossil Bannon Green Dial Men 44mm','₹9,995','../watches/watch/fossil/BQ2539I.webp')" class="cart">Add To Cart</button>     
+                            </div>
+                            <div class="watchesname"  data-name=" Yorke" data-gender="men" data-collection="Yorke" data-price="₹13,995" >
+                                <img src="../watches/watch/fossil/BQ2492I.webp">
+                                <p>Fossil</p>
+                                <p class="name">Fossil Yorke Black Dial Men 48mm</p>
+                                <P> ₹13,995 </p> 
+                                <button   id="Cart" onclick="addToCart('Fossil Yorke Black Dial Men 48m','₹13,995','../watches/watch/fossil/BQ2492I.webp')" class="cart">Add To Cart</button>     
+                            </div>
+                            <div class="watchesname"  data-name=" Gabby " data-gender="men"data-collection=" Gabby"  data-price="₹17,995" >
+                                <img src="../watches/watch/fossil/CE1110.webp">
+                                <p>Fossil</p>
+                                <p class="name">Fossil Gabby Brown Dial Women 34mm</p>
+                                <P> ₹17,995</p> 
+                                <button   id="Cart" onclick="addToCart('Fossil Gabby Brown Dial Women 34mm','₹17,995','../watches/watch/fossil/CE1110.webp')" class="cart">Add To Cart</button>     
+                            </div>
+                            <div class="watchesname"  data-name=" Fb-01 " data-gender="women" data-collection=" Fb-01"  data-price="₹17,995" >
+                                <img src="../watches/watch/fossil/CE1121I.webp">
+                                <p>Fossil</p>
+                                <p class="name">Fossil Fb-01 Brown Dial Women</p>
+                                <P>₹17,995</p> 
+                                <button   id="Cart" onclick="addToCart('Fossil Fb-01 Brown Dial Women','₹17,995','../watches/watch/fossil/CE1121I.webp')" class="cart">Add To Cart</button>     
+                            </div>
+                            <div class="watchesname"  data-name=" Redding" data-gender="women" data-collection="Redding "  data-price="₹11,995" >
+                                <img src="../watches/watch/fossil/BQ3576I.webp">
+                                <p>Fossil</p>
+                                <p class="name">Fossil Redding White Dial Women</p>
+                                <P> ₹11,995</p> 
+                                <button   id="Cart" onclick="addToCart('Fossil Redding White Dial Women',' ₹11,995','../watches/watch/fossil/BQ3576I.webp')" class="cart">Add To Cart</button>     
+                            </div>
+                            <div class="watchesname"  data-name=" Reid  " data-gender="women" data-collection="Reid "  data-price="₹8,495" >
+                                <img src="../watches/watch/fossil/BQ3656I.webp">
+                                <p>Fossil</p>
+                                <p class="name">Fossil Reid Rose Gold Dial Women 34mm</p>
+                                <P> ₹8,495</p> 
+                                <button   id="Cart" onclick="addToCart('Fossil Reid Rose Gold Dial Women 34mm','₹8,495','../watches/watch/fossil/BQ3656I.webp')" class="cart">Add To Cart</button>     
+                            </div>
+                            <div class="watchesname"  data-name=" Rye" data-gender="women" data-collection="Rye "  data-price="₹12,995" >
+                                <img src="../watches/watch/fossil/BQ3691.webp">
+                                <p>Fossil</p>
+                                <p class="name">Fossil Rye Rose Gold Dial Women 36mm</p>
+                                <P>  ₹12,495</p> 
+                                <button   id="Cart" onclick="addToCart('Fossil Rye Rose Gold Dial Women 36mm','₹12,495','../watches/watch/fossil/BQ3691.webp')" class="cart">Add To Cart</button>     
+                                </div>
+                            <div class="watchesname"  data-name=" FB-01" data-gender="women" data-collection="FB-01"  data-price="₹19,995" >
+                                <img src="../watches/watch/fossil/CE1113.webp">
+                                <p>Fossil</p>
+                                <p class="name">Fossil FB-01 White Dial Women 36mm</p>
+                                <P> ₹19,995</p> 
+                                <button   id="Cart" onclick="addToCart('Fossil FB-01 White Dial Women 36mm','₹19,995','../watches/watch/fossil/CE1113.webp')" class="cart">Add To Cart</button>     
+                            </div>
+                            <div class="watchesname"  data-name=" Lexie Luther " data-gender="women" data-collection="Lexie Luther"  data-price="₹9,995" >
+                                <img src="../watches/watch/fossil/BQ3569I.webp">
+                                <p>Fossil</p>
+                                <p class="name">Fossil Lexie Luther Black Dial Women 34mm</p>
+                                <P> ₹9,995</p> 
+                                <button   id="Cart" onclick="addToCart('Fossil Lexie Luther Black Dial Women 34mm','₹9,995','../watches/watch/fossil/BQ3569I.webp')" class="cart">Add To Cart</button>     
+                            </div>
+                            <div class="watchesname"  data-name=" Sullivan" data-gender="men"  data-collection="Sullivan" data-price="₹8,995" >
+                                <img src="../watches/watch/fossil/BQ2457I.webp">
+                                <p>Fossil</p>
+                                <p class="name">Fossil Sullivan Black Dial Men 44mm</p>
+                                <P> ₹8,995</p> 
+                                <button   id="Cart" onclick="addToCart('Fossil Sullivan Black Dial Men 44mm','₹8,995','../watches/watch/fossil/BQ2457I.webp')" class="cart">Add To Cart</button>     
+                            </div>
+                            <div class="watchesname"  data-name=" Fenmore " data-gender="men" data-collection="Fenmore"  data-price="₹14,495" >
+                                <img src="../watches/watch/fossil/BQ2366I.webp">
+                                <p>Fossil</p>
+                                <p class="name">Fossil Fenmore Black Dial Men 44mm</p>
+                                <P> ₹14,495</p> 
+                                <button   id="Cart" onclick="addToCart('Fossil Fenmore Black Dial Men 44mm','₹14,495','../watches/watch/fossil/BQ2366I.webp')" class="cart">Add To Cart</button>     
+                            </div>
+                                <div class="watchesname"  data-name=" Luther " data-gender="men" data-collection="Luther"  data-price="₹14,495" >
+                                <img src="../watches/watch/fossil/BQ2328.webp">
+                                <p>Fossil</p>
+                                <p class="name">Fossil Luther Black Dial Men 44mm</p>
+                                <P>₹14,495</p> 
+                                <button   id="Cart" onclick="addToCart('Fossil Luther Black Dial Men 44mm','₹14,495' ,'../watches/watch/fossil/BQ2328.webp')" class="cart">Add To Cart</button>     
+                            </div>
+                            <div class="watchesname"  data-name=" Modern Sophisticate" data-gender="women" data-collection="Modern Sophisticate"  data-price="₹7,995" >
+                                <img src="../watches/watch/fossil/bq1574i.webp">
+                                <p>Fossil</p>
+                                <p class="name"> Fossil Modern Sophisticate Silver Dial Women</p>
+                                <P> ₹7,995</p> 
+                                <button   id="Cart" onclick="addToCart('Fossil Modern Sophisticate Silver Dial Women','₹7,995', '../watches/watch/fossil/bq1574i.webp')" class="cart">Add To Cart</button>     
+                            </div>
+                            <div class="watchesname"  data-name=" Lux Luther " data-gender="men"  data-collection="Lux Luther" data-price="₹10,995">
+                                <img src="../watches/watch/fossil/BQ2416I.webp">
+                                <p>Fossil</p>
+                                <p class="name">Fossil Lux Luther Black Dial Men</p>                                  
+                                <P>  ₹10,995</p> 
+                                <button   id="Cart" onclick="addToCart('Fossil Lux Luther Black Dial Men',' ₹10,995' ,'../watches/watch/fossil/BQ2416I.webp')" class="cart">Add To Cart</button>     
+                            </div>
+                        </div>
+                    
+                    </div>
+                </div>
+            </div>  
+        </div>
+
+        <script src="../js/zimsonfilters.js" defer ></script>
+        <script src="../js/zimsonwatches.js" defer ></script>
+    </body>
+</html>

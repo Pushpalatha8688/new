@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Zimson Testing</title>
+    <link rel="stylesheet" href="./zimson/css/zimson testing.css">
+    <link rel="stylesheet" href="./zimson/css/zimson.css">
+    <link rel="stylesheet" href="./zimson/html/zimson watches.html">
+    <link rel="stylesheet" href="./zimson/css/zimson watches1.css">
+    <script src="./zimson/js/zimson_search.js"></script>
+    <script src="./zimson/js/zimsonwatches.js"></script>
+</head>
+<body>
+    <div class="template">
+        <div class="header">
+            <div class="find">
+                <p> Find A Showroom</p>
+            </div>
+            <div class="logo">
+                <img src="./zimson-logo-png_b1a82083-087a-4059-873e-20306d20174f.avif" class="image1">
+            </div>
+    </div>
+       <div class="navbar">
+            <div class="watches">
+                <ul>
+                    <div class="bar">
+                    <li> <a href="#ROLEX">ROLEX</a></li>
+                      <li class="dropdown">
+                        <a class="dropbtn" href="#BRANDS">BRANDS</a>
+                        <ul class="dropdown-content">
+                          <div class="Brand">
+                            <div class="column">
+                             <li><a href="#"><h2 style="color:olivedrab">AllBrands</h2></a></li>
+                             <li><a href="#">Alba</a></li>
+                             <li><a href="#">Anne Klein</a></li>
+                             <li><a href="#">Armani Exchange</a></li>
+                             <li><a href="#">Balmain</a></li>
+                             <li><a href="#">Bfit</a></li>
+                             <li><a href="#">Calvin Klein</a></li>
+                             <li><a href="#">Casio</a></li>
+                             </div>
+                             <div class="column">
+                             <li><a href="#">Daniel Wellington</a></li>
+                             <li><a href="#">Emporio Aarmani</a></li>
+                             <li><a href="#">Fossil</a></li>
+                             <li><a href="#">Gucci</a></li>
+                             <li><a href="#">Guess</a></li>
+                             <li><a href="#">Helix</a></li>
+                             <li><a href="#">Kenneth Cole</a></li>
+                             <li><a href="#">Longies</a></li>
+                             </div>
+                             <div class="column">
+                             <li><a href="#">Michale Kors</a></li>
+                             <li><a href="#">Omega</a></li>
+                             <li><a href="#">Police</a></li>
+                             <li><a href="#">Rado</a></li>
+                             <li><a href="#">Seiko</a></li>
+                             <li><a href="#">Seven Friday</a></li>
+                             <li><a href="#">Timer</a></li>
+                             </div>
+                             <div class="column-img">
+                              <li><a href="#"><img src="./watches/breitling-menu-img.webp"  class="image2"></a></li>
+                            </div>
+                            </div> 
+                        </ul>
+                    </li>
+                    <li><a href="#BUY ONLINE">BUY ONLINE</a></li>
+                    <li><a href="#SMART WATCH">SMART WATCH</a></li>
+                    <li class="dropdown">
+                      <a class="dropbtn" href="#WATCH FINDER">WATCH FINDER</a>
+                        <ul class="dropdown-content">
+                          <div class="Brand1">
+                            <div class="watchtext">
+                                <li> <a href="#"><h2 style="color:rgb(233, 162, 112)"> By Gender</h2></a></li>
+                                <li> <a href="#">Watches For Men</a></li>
+                                <li> <a href="#">Watches For Women</a></li>
+                                <li> <a href="#">Unisex Watches</a></li>    
+                            </div>
+                            <div class="watchimg">
+                             <img src="./watches/for_her.webp" class="image2">
+                             <img src="./watches/for_him.webp"  class="image2">
+                             <img src="./watches/watch/Most_selling_1.webp"  class="image2">
+                            </div>
+                            </div>
+                        </ul>
+                    </li>
+                    <li><a href="#SHOWROOMS">SHOWROOMS</a></li>
+                    <li><a href="#SERVICE">SERVICE</a></li>
+                </div>
+                <div class="bar1">
+                  <div class="search-container  image-container">
+                    <li><a href="#" id="searchIcon"  class="image-container" onclick="toggleSearchPanel()"><img src="./watches/icons/download (2).png" alt="Search" title="Search" /></a></li>
+                  </div>
+                  <div id="signupContainer" class="image-container">
+                    <li><a href="#" id="signupIcon" class="image-container" onclick="toggleSignupPanel()"><img src="./watches/icons/download (13).png"  title="Signup" />
+                      <button id="logoutButton" onclick="logout()" style="display:none;">Logout</button>
+                    </a></li>
+                  </div>   
+                     <!-- <li><a href="zimson sign up.html" target="_self"><img src="./download (13).png"></a></li> -->
+                  <li><a href="#" class="heart"></a></li>
+                  <div class="container  image-container" >
+                    <li><a href="#" id="cart" class="shopping image-container" onclick="openCart()"><img src="./watches/icons/download (14).png" title="Cart" />
+                        <span id="cartIcon">0</span></a></li>
+                </div>
+
+                     
+                     
+                     <div class="search-panel" id="searchPanel" style="display:none">
+                      <span id="closeSearch" onclick="toggleSearchPanel()">&times;</span>
+                      <h1 class="search-head">Search Our Site</h1>
+                      <input type="text" id="searchInput" placeholder="Search...">
+                      <button onclick="performSearch()"><img src="./watches/icons/download (26).png"></button>
+                      <div id="searchResults" class="search-results">
+                      </div>
+                    </div>
+
+                    <div id="sidePanel" class="side-panel">
+                      <span class="close-btn" onclick="closeSidePanel()">&times;</span>
+                      <h2>Shopping Cart</h2>
+                      <div id="cartItems" class="cart-items"></div>
+                      <hr>
+                      <div id="cartTotal" class="cart-total"></div>
+                      <div class="cart-actions">
+                          <button id="checkoutButton" onclick="checkout()" class="checkout-button">Checkout</button>
+                          <button onclick="closeSidePanel()" class="close-button">Close</button>
+                      </div>
+                  </div>
+
+                    <div  class="signup-panel" id="signuppanel" style="display:none">
+                      <span id="closesignup" onclick="toggleSignupPanel()">&times;</span>
+                      <div class="singup1">
+                      <h1 class="sign-head"> SIGN UP</h1>
+                      <input type="email" id="email" placeholder="Enter your email">
+                      <input type="password" id="password" placeholder="Enter your password">
+                      <br>
+                      <a href="#" onclick="forgotPassword()">Forgot Password?</a>
+                      <button onclick="signup()">Sign Up</button>
+                      <span id="closesignup" onclick="toggleSignupPanel()">&times;</span>
+                      </div>
+                  </div>
+                  <div id="message">Logout successful!</div>
+            
+                  <div class="card-details" id="cardDetailsPage" style="display: none;">
+                    <span id="closesignup"onclick="toggleCardDetails()">&times;</span>
+                    <h2>Card Details</h2>
+                    <label for="cardNumber">Card Number:</label>
+                    <input type="number" id="cardNumber" name="cardNumber" maxlength="16">
+                    <br>
+                    <label for="cvv">CVV:</label>
+                    <input type="number" id="cvv" name="cvv" maxlength="3">
+                    <br>
+                    <button onclick="placeOrder()">Place Order</button>
+                </div>
+              </div>
+                </ul>
+            </div>
+        </div>
+        <div class="template2">       
+        <div class="details-left">
+            <div class="shortimage">
+                <span class="dot1" onclick="currentSlide(0)"><img src="./zimson/watches/watch/fossil/BQ3655I.webp"></span> 
+                <span class="dot1" onclick="currentSlide(1)"><img src="./zimson/watches/watch/fossil/BQ3655_1.webp"></span> 
+                <span class="dot1" onclick="currentSlide(2)"><img src="./zimson/watches/watch/fossil/BQ3655_2.webp"></span>
+            </div>
+            <div class="slideshow">
+                <div class="mySlides">
+                    <img class="image7" src="./zimson/watches/watch/fossil/BQ3655I.webp">
+                </div>
+                <div class="mySlides">
+                    <img class="image7" src="./zimson/watches/watch/fossil/BQ3655_1.webp">
+                </div>
+                <div class="mySlides">
+                    <img class="image7" src="./zimson/watches/watch/fossil/BQ3655_2.webp">
+                </div>
+
+                <a class="prev" onclick="plusSlides(-1)"><img class="image6" src="./zimson/watches/icons/images.png"></a>
+                <a class="next" onclick="plusSlides(1)"><img class="image6" src="./zimson/watches/icons/download (24).png"></a>
+            </div>
+            <br>
+        </div>
+        <div class="details-right">
+            <div class="rigth-content">
+                <div class="logo4">
+                    <img src="./zimson/watches/icons/fossil_logo.svg">
+                </div>
+                <div class="watchname">
+                    <p class="fossil">Fossil</p>
+                    <h4 class="length">Fossil Reid Gold Dial Women 34mm</h4>
+                    <p class="fossil">BQ3655I</p>
+                    <p class="price">₹7,995</p>
+                    <p class="fossil">For The Women Who Wish To Express Themselves Through Their Fine Taste In Accessories, This Reid Gold Watch From Fossil Is A Perfect Pick.</p>
+                </div>
+                <!-- Add to Cart button -->
+                <button   id="Cart" onclick="addToCart()" class="cart1">Add To Cart</button>
+
+                <!-- Side panel for cart details -->
+                <div id="sidePanel" class="side-panel" style="display: none;">
+                    <a href="javascript:void(0)" class="close-btn" onclick="toggleSidePanel()">X</a>
+                    <h2 class="cart-head">Shopping Cart</h2>
+                    <hr>
+                    <div id="cartItems">
+                    </div>
+                    <hr>
+                    <p class="cart-price">Total: <span id="cartTotal">0</span></p>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            let dots = document.getElementsByClassName("dot1");
+            if (n > slides.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = slides.length }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].classList.remove("active");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].classList.add("active");
+        }
+
+        
+        var items = [
+            { name: 'Fossil Reid Gold Dial Women 34mm', price:'₹7,995', image: './BQ3655I.webp', description: '...' },
+          
+        ];
+
+       
+        var cart = [];
+
+        
+        function toggleSidePanel() {
+            var sidePanel = document.getElementById('sidePanel');
+            console.log(sidePanel.style.display === 'none')
+            sidePanel.style.display = (sidePanel.style.display === 'none' || cart.length === 0 )? 'block' : 'none';
+
+            // sidePanel.style.display = sidePanel.style.display === 'none' ?'block':'none';
+
+            if (sidePanel.style.display === 'block') {
+                displayCart();
+            }
+        }
+
+       
+        function addToCart() {
+            console.log(document.getElementById('sidePanel'))
+            var selectedItem = items[0];
+            cart.push(selectedItem);
+            displayCart();
+            toggleSidePanel();
+        }
+
+        // Function to remove item from cart
+        // function removeFromCart(index) {
+        //     // Remove the item from the cart based on the index
+        //     cart.splice(index, 1);
+
+        //     // Display updated cart details
+        //     displayCart();
+        // }
+
+function displayCart() {
+    var cartItemsElement = document.getElementById('cartItems');
+    var cartTotalElement = document.getElementById('cartTotal');
+   
+    var total=0;
+    cartItemsElement.innerHTML = '';
+
+    cart.forEach(function (item, index) {
+        var li = document.createElement('p');
+        li.style.display ='flex';
+
+        var numericPrice = parseFloat(item.price.replace('₹', '').replace(',', ''));
+
+// Add the numeric price to the total
+       total += numericPrice;
+
+        // Container for image
+        var imageContainer = document.createElement('div');
+        imageContainer.classList.add('image-container'); 
+        
+        // Display image
+        var img = document.createElement('img');
+        img.src = item.image;
+        img.alt = 'Product Image';
+        img.style.height = '80px';
+        img.style.width = '80px'; // Set the desired height here
+
+        imageContainer.appendChild(img);
+        li.appendChild(imageContainer);
+
+        // Container for text content
+        var textContainer = document.createElement('div');
+        textContainer.classList.add('text-container'); 
+
+        // Display name
+        var nameParagraph = document.createElement('p');
+        nameParagraph.textContent = item.name;
+        textContainer.appendChild(nameParagraph);
+
+        // Display price
+        var priceParagraph = document.createElement('p');
+        priceParagraph.textContent = item.price;
+        textContainer.appendChild(priceParagraph);
+
+        // var removeButton = document.createElement('button');
+        // removeButton.textContent = 'Remove';
+        // removeButton.onclick = function () {
+        //     removeFromCart(index);
+        // };
+
+        // li.appendChild(removeButton);
+         li.appendChild(textContainer);
+
+        cartItemsElement.appendChild(li);
+    });
+
+   
+    
+    // var total = cart.reduce(function (acc, item) {
+    //     return acc + item.price;
+    // }, 0);
+    cartTotalElement.textContent = '₹ '+ total.toFixed(2);
+}
+
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html>
+    <head>
+        <title>Zimson Watches</title>
+        <link rel="stylesheet" href="zimson watches.css">
+    </head>
+    <body>
+        <div class="template">
+            <div class="details-left">
+                <div class="shortimage">
+                    <span class="dot" onclick="currentSlide(0)"><img src="./BQ3655I.webp"></span> 
+                    <span class="dot" onclick="currentSlide(1)"><img src="./BQ3655_1.webp"></span> 
+                    <span class="dot" onclick="currentSlide(2)"><img src="./BQ3655_2.webp"></span>
+                </div>
+                <div class="slideshow">
+                    <div class="mySlides ">
+                        <img class="image1" src="./BQ3655I.webp">
+                    </div>
+                    <div class="mySlides ">
+                        <img  class="image1"src="./BQ3655_1.webp">
+                    </div>
+                    <div class="mySlides ">
+                        <img   class="image1" src="./BQ3655_2.webp">
+                    </div>
+
+                    <a class="prev" onclick="plusSlides(-1)"><img class="image" src="./images.png"></a>
+                    <a class="next" onclick="plusSlides(1)"><img class="image" src="./download (24).png"></a>
+                </div>
+                <br>
+            </div>
+            <div class="details-right">
+                <div class="rigth-content">
+                <div class="logo">
+                    <img src="./fossil_logo.svg">
+                </div>
+                <div class="watchname">
+                    <p class="fossil">Fossil</p>
+                    <h4 class="length">Fossil Reid Gold Dial Women 34mm</h4>
+                    <p class="fossil">BQ3655I</p>
+                    <p class="price">₹7,995</p>
+                    <p class="fossil">For The Women Who Wish To Express Themselves Through Their Fine Taste In Accessories, This Reid Gold Watch From Fossil Is A Perfect Pick.</p>
+                </div>
+
+         Add to Cart button
+        <button id="Cart" onclick="addToCart()" class="cart">Add To Cart</button>
+
+        Side panel for cart details 
+        <div id="sidePanel" class="side-panel">
+            <a href="javascript:void(0)" class="close-btn" onclick="toggleSidePanel()">×</a>
+            <h2>Shopping Cart</h2>
+            <ul id="cartItems">
+              <li><img src="./BQ3655I.webp"></li>
+              <li>Fossil Reid Gold Dial Women 34mm</li>
+              <li>price: 7995</li> 
+            </ul>
+            <p>Total:  ₹<span id="cartTotal">0</span></p>
+        </div>
+
+        <script>
+
+let slideIndex = 1;
+            showSlides(slideIndex);
+            
+            function plusSlides(n) {
+              showSlides(slideIndex += n);
+            }
+            
+            function currentSlide(n) {
+                console.log("CurrentSlide: ", n);
+              showSlides(slideIndex = n);
+            }
+            
+            function showSlides(n) {
+                console.log("Showing slides for index: ", n);
+              let i;
+              let slides = document.getElementsByClassName("mySlides");
+              let dots = document.getElementsByClassName("dot");
+              if (n > slides.length) {slideIndex = 1}    
+              if (n < 1) {slideIndex = slides.length}
+              for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+              }
+              for (i = 0; i < dots.length; i++) {
+                dots[i].classList.remove("active");
+              }
+              slides[slideIndex-1].style.display = "block";  
+              dots[slideIndex - 1].classList.add("active");
+            }
+
+            // Sample array of items
+            var items = [
+                { name: 'Fossil Reid Gold Dial Women 34mm',
+                 price: 7995,
+                  image: './BQ3655I.webp', 
+                  description: '...' 
+                },
+                // Add more items as needed
+             ];
+
+            // Shopping cart
+            var cart = [];
+
+            // Function to toggle the side panel
+            function toggleSidePanel() {
+                var sidePanel = document.getElementById('sidePanel');
+                sidePanel.style.display = (sidePanel.style.display === 'none') ? 'block' : 'none';
+
+if (sidePanel.style.display === 'block') {
+    displayCart();
+}
+}
+
+            // Function to add item to cart
+            function addToCart() {
+                // For simplicity, let's add the first item from the array
+                var selectedItem = items[0];
+
+                // Add the selected item to the cart
+                cart.push(selectedItem);
+
+                // Display updated cart details
+                displayCart();
+            }
+
+            // function removeFromCart(index) {
+            //     // Remove the item from the cart based on the index
+            //     cart.splice(index, 1);
+
+            //     // Display updated cart details
+            //     displayCart();
+            // }
+
+            // Function to display cart details
+            function displayCart() {
+                var cartItemsElement = document.getElementById('cartItems');
+                var cartTotalElement = document.getElementById('cartTotal');
+
+                // Clear previous content
+                cartItemsElement.innerHTML = '';
+
+                // Display each item in the cart
+                cart.forEach(function (item ,index) {
+                    var li = document.createElement('li');
+                    li.textContent = item.name;
+
+                     // Add remove button for each item
+                    //  var removeButton = document.createElement('button');
+                    // removeButton.textContent = 'Remove';
+                    // removeButton.onclick = function() {
+                    //     removeFromCart(index);
+                    // };
+
+                    li.appendChild(removeButton);
+
+                    cartItemsElement.appendChild(li);
+                });
+
+                // Calculate and display total price
+                var total = cart.reduce(function (acc, item) {
+                    return acc + item.price;
+                }, 0);
+                cartTotalElement.textContent = total;
+            }
+        </script>
+    </body>
+</html> 

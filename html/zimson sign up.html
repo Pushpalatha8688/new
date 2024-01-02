@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>zimson Sign In </title>
+    <head>
+        <style>
+
+.container {
+  width:100%;
+  display: flex;
+  align-items:center;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.left{
+  width:100%;
+  display: block;
+  max-width:300px;
+  justify-content:space-between;
+  box-sizing: border-box;
+
+}
+
+h1{ 
+color: brown;
+margin-top: 30px;
+/* margin-left: 55px; */
+margin-bottom: 0px;
+}
+
+.form-container {
+  width: 200px;
+  /* text-align: center; */
+}
+.label{
+  vertical-align: top;
+  display:inline-block;
+  /* margin-left:20px; */
+}
+.mobile:hover{
+  color:darkgray;
+}
+.mobile{
+  text-align: left;
+  padding-top: 10px;
+  border-radius:5px;
+  display:flex;
+  width: 450px;
+  height:33px;
+  /* margin-left:55px; */
+  background-color: lightgrey;
+}
+.label1{
+  vertical-align: top;
+  display:inline-block;
+  margin-left:0px;
+}
+.password{
+  text-align: left;
+  padding-top:10px;
+  position: relative;
+  border-radius:5px;
+  display:flex;
+  width:450px;
+  height:33px;
+  background-color: lightgray;
+  /* margin-left:55px; */
+} 
+.b {
+  color:brown;
+  text-decoration-line:none;
+  font-size: 15px;
+  margin-top: 0px;
+  /* margin-left: 20px; */
+}
+.button{
+  background-color: brown;
+  color:white;
+  border-radius: 7px;
+  margin-left:0px; 
+  margin-top: 4px;
+  text-decoration: none;
+}
+.img{
+  float:center;
+}
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="main">
+              <h1>Sign In</h1>
+              <p style=" margin-bottom:30px; margin-top: 0px;">Login to your Account</p>
+              <div class="form-container">
+                <form  id ="signInForm" action="your_signup_processing_script.php" method=""post>
+                <div> 
+                  <label class="label " for="mobile">Mobile Number</label><br>
+                  <input  class=" mobile" type="number" id="mobile" name="mobile" placeholder="+91"><br>
+                </div>
+                <div>
+                  <label  class="label1" for="password">Password <span style="color: red"> * </span></label><br>
+                  <input  class=" password" type="password" id="password" name="password" 
+                  pattern="^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{6,}$"
+                  title="Password must be at least 6 characters long, include at least one number and one special character."
+                  required placeholder="Enter your password"><br>
+                </div>
+                <a href="forgot_password.html"  class="b" style=" text-align:left;">Forgot Password?</a><br>
+                <div>
+                  <button class="button"  type="submit" onclick="validateForm()">
+                    <a href="zimson.html" target="_self"  class="button" >Sign In
+                  <img  class="img" src="./arrow1.jpg"></a> 
+                </button>
+                </div>
+                </form>
+              <!-- </div>
+              <p id="errorMessage" style="color: red; margin-top: 10px;"></p>
+              <p style="margin-top:20px;"> Have trouble signing in? <span  style="color:brown" > Get Help </span></p>
+              <hr style=" width:30%;">
+              <p style=" font-size: 18px;"> Dont have an account ? <span style="color:brown"> Sign Up</span></p>
+            </div>  
+        </div> -->
+        <script>
+          function validateForm() {
+              var mobile = document.getElementById('mobile').value;
+              var password = document.getElementById('password').value;
+
+              var mobileRegex = /^\d{10}$/;
+              var passwordRegex = /^(?=.*[a-zA-Z])(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{10}$/;
+
+            if (!mobileRegex.test(mobile)) {
+                document.getElementById('errorMessage').innerText = "Mobile number must be exactly 10 digits.";
+                event.preventDefault();
+            } else if (!passwordRegex.test(password)) {
+                document.getElementById('errorMessage').innerText = "Password must be exactly 10 characters long and include at least one letter, one number, and one special character.";
+                event.preventDefault();
+            } else {
+                document.getElementById('errorMessage').innerText = "";
+                document.getElementById('signInForm').submit();
+              }
+          }
+      </script>
+
+
+
+    </body>
+</html>
+

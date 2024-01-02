@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html>
+    <head>
+     <title>Zimson</title>
+     <link rel="stylesheet" href="./css/zimson.css">
+     <link rel="stylesheet" href="./css/zimson watches1.css">
+     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+     <script src="./js/zimson_search.js"></script>
+    </head>
+    <body>
+      <div class="template">
+        <div class="header">
+                <div class="find">
+                    <p> Find A Showroom</p>
+                </div>
+                <div class="logo">
+                    <img src="./zimson-logo-png_b1a82083-087a-4059-873e-20306d20174f.avif" class="image1">
+                </div>
+        </div>
+           <div class="navbar">
+                <div class="watches">
+                    <ul>
+                        <div class="bar">
+                        <li> <a href="#ROLEX">ROLEX</a></li>
+                          <li class="dropdown">
+                            <a class="dropbtn" href="#BRANDS">BRANDS</a>
+                            <ul class="dropdown-content">
+                              <div class="Brand">
+                                <div class="column">
+                                 <li><a href="#"><h2 style="color:olivedrab">AllBrands</h2></a></li>
+                                 <li><a href="#">Alba</a></li>
+                                 <li><a href="#">Anne Klein</a></li>
+                                 <li><a href="#">Armani Exchange</a></li>
+                                 <li><a href="#">Balmain</a></li>
+                                 <li><a href="#">Bfit</a></li>
+                                 <li><a href="#">Calvin Klein</a></li>
+                                 <li><a href="#">Casio</a></li>
+                                 </div>
+                                 <div class="column">
+                                 <li><a href="#">Daniel Wellington</a></li>
+                                 <li><a href="#">Emporio Aarmani</a></li>
+                                 <li><a href="#">Fossil</a></li>
+                                 <li><a href="#">Gucci</a></li>
+                                 <li><a href="#">Guess</a></li>
+                                 <li><a href="#">Helix</a></li>
+                                 <li><a href="#">Kenneth Cole</a></li>
+                                 <li><a href="#">Longies</a></li>
+                                 </div>
+                                 <div class="column">
+                                 <li><a href="#">Michale Kors</a></li>
+                                 <li><a href="#">Omega</a></li>
+                                 <li><a href="#">Police</a></li>
+                                 <li><a href="#">Rado</a></li>
+                                 <li><a href="#">Seiko</a></li>
+                                 <li><a href="#">Seven Friday</a></li>
+                                 <li><a href="#">Timer</a></li>
+                                 </div>
+                                 <div class="column-img">
+                                  <li><a href="#"><img src="./watches/breitling-menu-img.webp"  class="image2"></a></li>
+                                </div>
+                                </div> 
+                            </ul>
+                        </li>
+                        <li><a href="#BUY ONLINE">BUY ONLINE</a></li>
+                        <li><a href="#SMART WATCH">SMART WATCH</a></li>
+                        <li class="dropdown">
+                          <a class="dropbtn" href="#WATCH FINDER">WATCH FINDER</a>
+                            <ul class="dropdown-content">
+                              <div class="Brand1">
+                                <div class="watchtext">
+                                    <li> <a href="#"><h2 style="color:rgb(233, 162, 112)"> By Gender</h2></a></li>
+                                    <li> <a href="#">Watches For Men</a></li>
+                                    <li> <a href="#">Watches For Women</a></li>
+                                    <li> <a href="#">Unisex Watches</a></li>    
+                                </div>
+                                <div class="watchimg">
+                                 <img src="./watches/for_her.webp" class="image2">
+                                 <img src="./watches/for_him.webp"  class="image2">
+                                 <img src="./watches/watch/Most_selling_1.webp"  class="image2">
+                                </div>
+                                </div>
+                            </ul>
+                        </li>
+                        <li><a href="#SHOWROOMS">SHOWROOMS</a></li>
+                        <li><a href="#SERVICE">SERVICE</a></li>
+                    </div>
+                    <div class="bar1">
+                      <div class="search-container  image-container">
+                        <li><a href="#" id="searchIcon"  class="image-container" onclick="toggleSearchPanel()"><img src="./watches/icons/download (2).png" alt="Search" title="Search" /></a></li>
+                      </div>
+                      <div id="signupContainer" class="image-container">
+                        <li><a href="#" id="signupIcon" class="image-container" onclick="toggleSignupPanel()"><img src="./watches/icons/download (13).png"  title="Signup" />
+                          <button id="logoutButton" onclick="logout()" style="display:none;">Logout</button>
+                        </a></li>
+                      </div>   
+                         <!-- <li><a href="zimson sign up.html" target="_self"><img src="./download (13).png"></a></li> -->
+                      <li><a href="#" class="heart"></a></li>
+                      <div class="container  image-container" >
+                        <li><a href="#" id="cart" class="shopping image-container" onclick="openCart()"><img src="./watches/icons/download (14).png" title="Cart" />
+                            <span id="cartIcon">0</span></a></li>
+                    </div>
+
+                         
+                         
+                         <div class="search-panel" id="searchPanel" style="display:none">
+                          <span id="closeSearch" onclick="toggleSearchPanel()">&times;</span>
+                          <h1 class="search-head">Search Our Site</h1>
+                          <input type="text" id="searchInput" placeholder="Search...">
+                          <button onclick="performSearch()"><img src="./watches/icons/download (26).png"></button>
+                          <div id="searchResults" class="search-results">
+                          </div>
+                        </div>
+
+                        <div id="sidePanel" class="side-panel">
+                          <span class="close-btn" onclick="closeSidePanel()">&times;</span>
+                          <h2>Shopping Cart</h2>
+                          <div id="cartItems" class="cart-items"></div>
+                          <hr>
+                          <div id="cartTotal" class="cart-total"></div>
+                          <div class="cart-actions">
+                              <button id="checkoutButton" onclick="checkout()" class="checkout-button">Checkout</button>
+                              <button onclick="closeSidePanel()" class="close-button">Close</button>
+                          </div>
+                      </div>
+
+                        <div  class="signup-panel" id="signuppanel" style="display:none">
+                          <span id="closesignup" onclick="toggleSignupPanel()">&times;</span>
+                          <div class="singup1">
+                          <h1 class="sign-head"> SIGN UP</h1>
+                          <input type="email" id="email" placeholder="Enter your email">
+                          <input type="password" id="password" placeholder="Enter your password">
+                          <br>
+                          <a href="#" onclick="forgotPassword()">Forgot Password?</a>
+                          <button onclick="signup()">Sign Up</button>
+                          <span id="closesignup" onclick="toggleSignupPanel()">&times;</span>
+                          </div>
+                      </div>
+                      <div id="message">Logout successful!</div>
+                
+                      <div class="card-details" id="cardDetailsPage" style="display: none;">
+                        <span id="closesignup"onclick="toggleCardDetails()">&times;</span>
+                        <h2>Card Details</h2>
+                        <label for="cardNumber">Card Number:</label>
+                        <input type="number" id="cardNumber" name="cardNumber" maxlength="16">
+                        <br>
+                        <label for="cvv">CVV:</label>
+                        <input type="number" id="cvv" name="cvv" maxlength="3">
+                        <br>
+                        <button onclick="placeOrder()">Place Order</button>
+                    </div>
+                  </div>
+                    </ul>
+                </div>
+            </div>
+            <div class="main">
+              <div class="slideshow-container">
+
+                <div class="mySlides">
+                  <img src="./watches/silde/1800x682_RBA_EN_FF_DESKTOP_Sky-Dweller_M336239-0002_STATIC-JPEG.webp" style="width:100% ; height:500px">
+                </div>
+                
+                <div class="mySlides">
+                  <img src="./watches/silde/Discover_Breitling_Navitimer_Collections_1.webp" style="width:100% ;height:500px">
+                </div>
+                
+                <div class="mySlides">
+                  <img src="./watches/silde/2000x886px_LE23.webp" style="width:100% ; height:500px">
+                </div>
+                
+                <div class="mySlides ">
+                  <img src="./watches/silde/2000x886-rado.webp" style="width:100% ; height:500px">
+                </div>
+                
+                <div class="mySlides ">
+                  <img src="./watches/silde/Sideral-2000x886_px.webp" style="width:100% ; height:500px">
+                </div>
+                
+                <a class="prev" onclick="plusSlides(-1)"><img class="image" src="./watches/icons/images.png"></a>
+                <a class="next" onclick="plusSlides(1)"><img class="image" src="./watches/icons/download (24).png"></a>
+             
+                </div>
+                <br>
+                
+             <div style="text-align:center;">
+                <span class="dot" onclick="currentSlide(0)"></span> 
+                <span class="dot" onclick="currentSlide(1)"></span> 
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot" onclick="currentSlide(4)"></span> 
+             </div>
+              <div class="logo1">
+                <div class="head1">
+                 <h2>Luxury Swiss Brands</h2>
+                </div>
+                <div class="brands">
+                    <div class="brandsname">
+                      <img src="./watches/watch/logos/Breitling_1fc6ad6c-8f03-4d38-a34e-4c5731200448.webp">
+                     <p>Breitling</p>
+                    </div>
+                    <div class="brandsname">
+                      <img src="./watches/watch/logos/Omega_e5b8dfac-35e4-4715-9a81-cee84e816f85.webp">
+                     <p>Omega</p>
+                    </div>
+                    <div class="brandsname">
+                      <img src="./watches/watch/logos/Rado_ee387cbf-dc8d-45af-8be3-b4f41d34a046.webp">
+                     <p>Rado</p>
+                    </div>
+                    <div class="brandsname">
+                      <img src="./watches/watch/logos/reguet_e383cbc6-cdce-4998-b518-88c9c07f2956.webp">
+                      <p>Breguet</p>
+                    </div>
+                    <div class="brandsname">
+                      <img src="./watches/watch/logos/Bvlgari_97954ce9-06f2-42e5-bedb-bb47230cd0d3.webp">
+                      <p>Bvlgari</p>
+                    </div>
+                    <div class="brandsname">
+                      <img src="./watches/watch/logos/Tag_Heuer_2b10a1fc-15cc-4ab2-bd1c-47965681aec3.webp">
+                      <p>Tag_Heuer</p>
+                    </div>
+                    <div class="brandsname">
+                      <img src="./watches/watch/logos/Tissot-1.webp">
+                      <p>Tissot</p>
+                    </div>
+                    <div class="brandsname">
+                     <img src="./watches/watch/logos/Chopard_47246bf2-226b-4d22-8828-d91ec59cb782.webp">
+                     <p>Chopard</p>
+                    </div>
+                  </div>
+            <div class="logos2">
+                <div class="head2">
+                 <h2>EXPLORE THE COLLECTION</h2>
+                </div>
+                <div class="watches1">
+                    <div class="watches1name">
+                        <img src="./watches/watch/search/t1374101109101.webp">
+                        <div class="watchp">
+                        <p>Tissot</p>
+                        <p class="name">Tissot T-Classic Green Dial Men 40mm</p>
+                        <P>Regular price₹35,500</p>
+                        </div>  
+                    </div>
+                    <div class="watches1name">
+                        <img src="./watches/watch/search/r32128162.webp">
+                        <div class="watchp">
+                        <p>Tissot</p>
+                        <p class="name">Tissot T-Sport Black Dial Men 41mm </p>
+                        <P> ₹94,000</p>
+                        </div>  
+                    </div>
+                    <div class="watches1name">
+                        <img src="./watches/watch/search/ab2510201k1p1.webp">
+                        <div class="watchp">
+                        <p>Breitling</p>
+                        <p class="name">Breitling Premier B25 Datora Champagne Dial Men 42mm</p>
+                        <P> ₹1,161,000</p>
+                        </div>
+                    </div>
+                    <div class="watches1name">
+                        <img src="./watches/watch/search/5000-0130-B52A_65e51ba9-ba1a-470b-a812-6362d7238b9c.webp">
+                        <div class="watchp">
+                        <p>Blancpain</p>
+                        <p class="name">Blancpain Fifty Fathoms Black Dial Men 43.6mm</p>
+                        <P>₹1,067,000</p>
+                        </div>
+                    </div>
+                    <div class="watches1name">
+                        <img src="./watches/watch/search/5200_0153_B52A_RVB.webp">
+                        <div class="watchp">
+                        <p>Blancpain</p>
+                        <p class="name">Blancpain Fifty Fathoms Green Dial Men 43.6mm</p>
+                        <P>₹1,422,000</p>
+                        </div>  
+                    </div>
+                    <div class="watches1name">
+                        <img src="./watches/watch/search/33210415110001.webp">
+                        <div class="watchp">
+                        <p>Omega</p>
+                        <p class="name">Omega Speedmaster Speedmaster '57 Co Axial Master Chronometer Chronographgreen Dial Men 40.5MM</p>
+                        <P>₹924,600</p>
+                        </div>
+                    </div>
+                    <div class="watches1name">
+                        <img src="./watches/watch/search/ab0117131c1p2.webp">
+                        <div class="watchp">
+                        <p>Breitling</p>
+                        <p class="name">Breitling Navitimer 8 B01 Blue Dial Men 43mm</p>
+                        <P>₹614,900</p>
+                        </div>
+                    </div>
+                    <div class="watches1name">
+                        <img src="./watches/watch/search/r32128162.webp">
+                        <div class="watchp">
+                        <p>Rado</p>
+                        <p class="name">Rado Captain Cook Black Dial 43mm R32128162</p>
+                        <P>₹394,400</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="logos1">
+                  <div class="head2">
+                    <h2>SHOP ONLINE NOW</h2>
+                  </div>
+                    <div class="watches2name">
+                      <div class="watches2">
+                        <a href="./html/zimson watches.html" target="_self" class="watches21">
+                        <img src="./watches/watch/watchnames/fossil_f893499c-bd2d-40cf-8dc0-cfec028b4a5d.webp"></a>
+                        <p class="bottom-left1">FOSSIL</p>
+                      </div>
+                      <div class="watches2">
+                        <a href="./html/zimson mk watches.html" target="_self" class="watches21">
+                        <img src="./watches/watch/watchnames/MICHAEL_KORS.webp"></a>
+                        <p class="bottom-left1">MICHAEL KORS</p>
+                      </div>
+                      <div class="watches2">
+                        <img src="./watches/watch/watchnames/tissot_b0d6385e-e035-4c98-8798-ee7a482ac07e.webp">
+                        <p class="bottom-left">TISSOT</p>
+                      </div>
+                      <div class="watches2">
+                        <img src="./watches/watch/watchnames/balman.webp">
+                        <p class="bottom-left">BALMAN</p>
+                      </div>
+                      <div class="watches2">
+                        <img src="./watches/watch/watchnames/casio_3b22e7d1-0b13-4138-addf-4f9a7c98df0b.webp">
+                        <p class="bottom-left">CASIO</p>
+                      </div>
+                      <div class="watches2">
+                        <img src="./watches/watch/watchnames/TITEN.webp">
+                        <p class="bottom-left">TITEN</p>
+                      </div>
+                    </div>     
+              </div>
+            </div>
+              </div>
+            </div>
+      
+          </div>
+          <div class="footer">
+            <div class="footer-header">
+              <div class="footer-header-left">
+                <div class="update">
+                 <p  style="color: antiquewhite; font-size: 20px; font-weight: 300;">KEEP ME UP TO DATE</p>
+                 <p style="color: rgb(180, 175, 175);">I want to stay up to date with the latest</p>
+                </div>
+                <div class="mail">
+                  <input type="email" placeholder="Enter youy email">
+                  <button>SUBSCRIBE</button>
+                </div>
+              </div>
+              <div class="footer-header-right">
+                <div class="years">
+                  <img  src="./watches/icons/75years.svg">
+                  <p> Years experience</p>
+                </div>
+                <div class="original">
+                  <img src="./watches/icons/orginal.svg">
+                  <p>Authentic And Genuine Brands</p>
+                </div>
+                <div class="easyrt">
+                  <img src="./watches/icons/easyrt.svg">
+                  <p>Easy Returns And Exchanges</p>
+                </div>
+              </div>
+            </div>
+            <div class="footer-main">
+              <div class="main-head">
+                <div class="footerlogo">
+                 <img src="./ZIMSON_footer-logo.avif">
+                </div>
+                <div class="footer-details">
+                  <p>Contact us</p>
+                  <p>Services</p>
+                  <p>shipping policy</p>
+                  <p>Terms & Condition</p>
+                  <p>Blog</p>
+                  <p>About</p>
+                </div>  
+              </div>
+              <div class="Brands">
+              <div class="brand">
+                <div class="brandnames">
+                   <p>Alba</p>
+                    <p>Anne Klein</p>
+                    <p>Armani Exchange</p>
+                    <p>Balmain</p>
+                    <p>Bering</p>
+                    <p>Blancpain</p>
+                    <p>Bfit</p>
+                    <p>Bvlgari</p>
+                    <p>Breguet</p>
+                </div>
+                <div class="brandnames">
+                    <p>Breitling</p>
+                    <p>Calvin Klein</p>
+                    <p>Casio</p>
+                    <p>Cerruti</p>
+                    <p>Chopard</p>
+                    <p>Coach</p>
+                    <p>Daniel Wellington</p>
+                    <p>Diesel</p>
+                    <p>Emporio Aarmani</p>
+                    <p>Fastrack</p>
+                    <p>Fire Bolt
+                    </p>
+                </div>
+                <div class="brandnames">
+                    <p>Fossil</p>
+                    <p>Giordano</p>
+                    <p>Gucci</p>
+                    <p>Guess</p>
+                    <p>Helix</p>
+                    <p>Hublot</p>
+                    <p>Kenneth Cole</p>
+                    <p>Longines</p>
+                    <p>Michael Kors</p>
+                    <p>Mont Blanc</p>
+                    <p>Movado</p>
+                    <p>Omega</p>
+                </div>
+                <div class="brandnames">
+                  <p>Police</p>
+                    <p>Rolex</p>
+                    <p>Rado</p>
+                    <p>Roamer</p>
+                    <p>Seiko</p>
+                    <p>Seven Friday</p>
+                    <p>Skagen</p>
+                    <p>Sonata</p>
+                    <p>Swarovski</p>
+                    <p>Tag Heuer</p>
+                    <p>Timex</p>
+                  </div>
+                  <div class="brandnames">
+                    <p>Tissot</p>
+                    <p>Titan</p>
+                    <p>TMX</p>
+                    <p>Tommy Hilfiger</p>
+                    <p>Victorinox</p>
+                    <p>Zoop</p>
+                </div>
+              </div>
+              </div>
+              <div class="social-logos">
+                <img src="./watches/icons/MDI - facebook.80d17278.svg">
+                <img src="./watches/icons/MDI - instagram.df970887.svg">
+                <img src="./watches/icons/MDI - twitter.655d1bd7.svg">
+                <img src="./watches/icons/MDI - youtube.b279f9e6.svg">
+              </div>
+            </div>
+
+
+            
+          </div>
+<script>
+  var slideIndex = 0;
+  showSlides(slideIndex);
+
+
+function showSlides() {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    
+    // Check if there are slides before trying to access them
+    if (slides.length > 0) {
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+
+        slideIndex++;
+        if (slideIndex > slides.length) { slideIndex = 1; }
+        
+        slides[slideIndex - 1].style.display = "block";
+    }
+
+    setTimeout(showSlides, 3000);
+}
+
+function plusSlides(n) {
+    showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+    showSlides(slideIndex = n);
+}
+
+// Call the showSlides function when the DOM is fully loaded
+document.addEventListener("DOMContentLoaded", function() {
+    showSlides();
+});
+
+
+function toggleSignupPanel() {
+  var signupPanel = document.getElementById('signuppanel');
+   if (signupPanel.style.display === 'block' || signupPanel.style.display === '') {
+        signupPanel.style.display = 'none';
+    } else {
+        signupPanel.style.display = 'block';
+    }
+}
+
+
+function signup() {
+    var emailInput = document.getElementById('email');
+    var passwordInput = document.getElementById('password');
+
+    // Validate email format
+    if (!isValidEmail(emailInput.value)) {
+        alert('Please enter a valid email address.');
+        return;
+    }
+
+    // Validate password format
+    if (!isValidPassword(passwordInput.value)) {
+        alert('Password must contain at least one letter, one number, and one special character.');
+        return;
+    }
+
+    // Other signup logic goes here
+
+    // Reset form inputs after successful signup
+    emailInput.value = '';
+    passwordInput.value = '';
+
+    // Close the signup panel
+    toggleSignupPanel();
+}
+
+function isValidEmail(email) {
+    var emailRegex = /\S+@\S+\.\S+/;
+    return emailRegex.test(email);
+}
+
+function isValidPassword(password) {
+    var passwordRegex = /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]+$/;
+    return passwordRegex.test(password);
+}
+        
+</script>
+<script src="./zimsonwatches.js"></script>
+</body>
+</html>
+        
