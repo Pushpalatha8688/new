@@ -19,142 +19,143 @@
                     </a>
                 </div>
         </div>
-           <div class="navbar">
-                <div class="watches">
+        <div class="navbar">
+            <div class="watches">
+                    <div class="bar">
                     <ul>
-                        <div class="bar">
-                        <li> <a href="#ROLEX">ROLEX</a></li>
-                          <li class="dropdown">
-                            <a class="dropbtn" href="#BRANDS">BRANDS</a>
-                            <ul class="dropdown-content">
-                              <div class="Brand">
-                                <div class="column">
-                                 <li><a href="#"><h2 style="color:olivedrab">AllBrands</h2></a></li>
-                                 <li><a href="#">Alba</a></li>
-                                 <li><a href="#">Anne Klein</a></li>
-                                 <li><a href="#">Armani Exchange</a></li>
-                                 <li><a href="#">Balmain</a></li>
-                                 <li><a href="#">Bfit</a></li>
-                                 <li><a href="#">Calvin Klein</a></li>
-                                 <li><a href="#">Casio</a></li>
-                                 </div>
-                                 <div class="column">
-                                 <li><a href="#">Daniel Wellington</a></li>
-                                 <li><a href="#">Emporio Aarmani</a></li>
-                                 <li><a href="#">Fossil</a></li>
-                                 <li><a href="#">Gucci</a></li>
-                                 <li><a href="#">Guess</a></li>
-                                 <li><a href="#">Helix</a></li>
-                                 <li><a href="#">Kenneth Cole</a></li>
-                                 <li><a href="#">Longies</a></li>
-                                 </div>
-                                 <div class="column">
-                                 <li><a href="#">Michale Kors</a></li>
-                                 <li><a href="#">Omega</a></li>
-                                 <li><a href="#">Police</a></li>
-                                 <li><a href="#">Rado</a></li>
-                                 <li><a href="#">Seiko</a></li>
-                                 <li><a href="#">Seven Friday</a></li>
-                                 <li><a href="#">Timer</a></li>
-                                 </div>
-                                 <div class="column-img">
-                                  <li><a href="#"><img src="../watches/breitling-menu-img.webp"  class="image2"></a></li>
-                                </div>
-                                </div> 
-                            </ul>
-                        </li>
-                        <li><a href="#BUY ONLINE">BUY ONLINE</a></li>
-                        <li><a href="#SMART WATCH">SMART WATCH</a></li>
-                        <li class="dropdown">
-                          <a class="dropbtn" href="#WATCH FINDER">WATCH FINDER</a>
-                            <ul class="dropdown-content">
-                              <div class="Brand1">
-                                <div class="watchtext">
-                                    <li> <a href="#"><h2 style="color:rgb(233, 162, 112)"> By Gender</h2></a></li>
-                                    <li> <a href="#">Watches For Men</a></li>
-                                    <li> <a href="#">Watches For Women</a></li>
-                                    <li> <a href="#">Unisex Watches</a></li>    
-                                </div>
-                                <div class="watchimg">
-                                 <img src="../watches/for_her.webp" class="image2">
-                                 <img src="../watches/for_him.webp"  class="image2">
-                                 <img src="../watches/watch/Most_selling_1.webp"  class="image2">
-                                </div>
-                                </div>
-                            </ul>
-                        </li>
-                        <li><a href="#SHOWROOMS">SHOWROOMS</a></li>
-                        <li><a href="#SERVICE">SERVICE</a></li>
-                    </div>
-                    <div class="bar1">
-                      <div class="search-container  image-container">
-                        <li><a href="#" id="searchIcon"  class="image-container" onclick="toggleSearchPanel()"><img src="../watches/icons/download (2).png" alt="Search" title="Search" /></a></li>
-                      </div>
-                      <div id="signupContainer" class="image-container">
-                        <li><a href="#" id="signupIcon" class="image-container" onclick="toggleSignupPanel()"><img src="../watches/icons/download (13).png"  title="Signup" />
-                          <button id="logoutButton" onclick="logout()" style="display:none;">Logout</button>
-                        </a></li>
-                      </div>   
-                         <!-- <li><a href="zimson sign up.html" target="_self"><img src="./download (13).png"></a></li> -->
-                      <li><a href="#" class="heart"></a></li>
-                      <div class="container  image-container" >
-                        <li><a href="#" id="cart" class="shopping image-container" onclick="openCart()"><img src="../watches/icons/download (14).png" title="Cart" />
-                            <span id="cartIcon">0</span></a></li>
-                    </div>
-
-                         
-                         
-                         <div class="search-panel" id="searchPanel" style="display:none">
-                          <span id="closeSearch" onclick="toggleSearchPanel()">&times;</span>
-                          <h1 class="search-head">Search Our Site</h1>
-                          <input type="text" id="searchInput" placeholder="Search...">
-                          <button onclick="performSearch()"><img src="../watches/icons/download (26).png"></button>
-                          <div id="searchResults" class="search-results">
-                          </div>
-                        </div>
-
-                        <div id="sidePanel" class="side-panel">
-                          <span class="close-btn" onclick="closeSidePanel()">&times;</span>
-                          <h2>Shopping Cart</h2>
-                          <div id="cartItems" class="cart-items"></div>
-                          <hr>
-                          <div id="cartTotal" class="cart-total"></div>
-                          <div class="cart-actions">
-                              <button id="checkoutButton" onclick="checkout()" class="checkout-button">Checkout</button>
-                              <button onclick="closeSidePanel()" class="close-button">Close</button>
-                          </div>
-                      </div>
-
-                        <div  class="signup-panel" id="signuppanel" style="display:none">
-                          <span id="closesignup" onclick="toggleSignupPanel()">&times;</span>
-                          <div class="singup1">
-                          <h1 class="sign-head"> SIGN UP</h1>
-                          <input type="email" id="email" placeholder="Enter your email">
-                          <input type="password" id="password" placeholder="Enter your password">
-                          <br>
-                          <a href="#" onclick="forgotPassword()">Forgot Password?</a>
-                          <button onclick="signup()">Sign Up</button>
-                          <span id="closesignup" onclick="toggleSignupPanel()">&times;</span>
-                          </div>
-                      </div>
-                      <div id="message">Logout successful!</div>
-                
-                      <div class="card-details" id="cardDetailsPage" style="display: none;">
-                        <span id="closesignup"onclick="toggleCardDetails()">&times;</span>
-                        <h2>Card Details</h2>
-                        <label for="cardNumber">Card Number:</label>
-                        <input type="number" id="cardNumber" name="cardNumber" maxlength="16">
-                        <br>
-                        <label for="cvv">CVV:</label>
-                        <input type="number" id="cvv" name="cvv" maxlength="3">
-                        <br>
-                        <button onclick="placeOrder()">Place Order</button>
-                    </div>
-                    <div id="confirmationContainer"></div>
-                  </div>
+                    <li> <a href="#ROLEX">ROLEX</a></li>
+                      <li class="dropdown">
+                        <a class="dropbtn" href="#BRANDS">BRANDS</a>
+                        <ul class="dropdown-content">
+                          <div class="Brand">
+                            <div class="column">
+                             <li><a href="#"><h2 style="color:olivedrab">AllBrands</h2></a></li>
+                             <li><a href="#">Alba</a></li>
+                             <li><a href="#">Anne Klein</a></li>
+                             <li><a href="#">Armani Exchange</a></li>
+                             <li><a href="#">Balmain</a></li>
+                             <li><a href="#">Bfit</a></li>
+                             <li><a href="#">Calvin Klein</a></li>
+                             <li><a href="#">Casio</a></li>
+                             </div>
+                             <div class="column">
+                             <li><a href="#">Daniel Wellington</a></li>
+                             <li><a href="#">Emporio Aarmani</a></li>
+                             <li><a href="#">Fossil</a></li>
+                             <li><a href="#">Gucci</a></li>
+                             <li><a href="#">Guess</a></li>
+                             <li><a href="#">Helix</a></li>
+                             <li><a href="#">Kenneth Cole</a></li>
+                             <li><a href="#">Longies</a></li>
+                             </div>
+                             <div class="column">
+                             <li><a href="#">Michale Kors</a></li>
+                             <li><a href="#">Omega</a></li>
+                             <li><a href="#">Police</a></li>
+                             <li><a href="#">Rado</a></li>
+                             <li><a href="#">Seiko</a></li>
+                             <li><a href="#">Seven Friday</a></li>
+                             <li><a href="#">Timer</a></li>
+                             </div>
+                             <div class="column-img">
+                              <img src="./watches/breitling-menu-img.webp"  class="image2">
+                            </div>
+                            </div> 
+                        </ul>
+                    </li>
+                    <li><a href="#BUY ONLINE">BUY ONLINE</a></li>
+                    <li><a href="#SMART WATCH">SMART WATCH</a></li>
+                    <li class="dropdown">
+                      <a class="dropbtn" href="#WATCH FINDER">WATCH FINDER</a>
+                        <ul class="dropdown-content">
+                          <div class="Brand1">
+                            <div class="watchtext">
+                                <li> <a href="#"><h2 style="color:rgb(233, 162, 112)"> By Gender</h2></a></li>
+                                <li> <a href="#">Watches For Men</a></li>
+                                <li> <a href="#">Watches For Women</a></li>
+                                <li> <a href="#">Unisex Watches</a></li>    
+                            </div>
+                            <div class="watchimg">
+                             <img src="./watches/for_her.webp" class="image2">
+                             <img src="./watches/for_him.webp"  class="image2">
+                             <img src="./watches/watch/Most_selling_1.webp"  class="image2">
+                            </div>
+                            </div>
+                        </ul>
+                    </li>
+                    <li><a href="#SHOWROOMS">SHOWROOMS</a></li>
+                    <li><a href="#SERVICE">SERVICE</a></li>
                     </ul>
                 </div>
+                <div class="bar1">
+                  <ul>
+                  <div class="search-container  image-container">
+                    <li><a href="#" id="searchIcon"  class="image-container" onclick="toggleSearchPanel()"><img src="./watches/icons/download (2).png" alt="Search" title="Search" /></a></li>
+                  </div>
+                  <div id="signupContainer" class="image-container">
+                    <li><a href="#" id="signupIcon" class="image-container" onclick="toggleSignupPanel()"><img src="./watches/icons/download (13).png"  title="Signup" />
+                      <button id="logoutButton" onclick="logout()" style="display:none;">Logout</button>
+                    </a></li>
+                  </div>   
+                     <!-- <li><a href="zimson sign up.html" target="_self"><img src="./download (13).png"></a></li> -->
+                  <li><a href="#" class="heart"></a></li>
+                  <div class="container  image-container" >
+                    <li><a href="#" id="cart" class="shopping image-container" onclick="openCart()"><img src="./watches/icons/download (14).png" title="Cart" />
+                        <span id="cartIcon">0</span></a></li>
+                </div>
+                </ul>
+                     
+                     
+                     <div class="search-panel" id="searchPanel" style="display:none">
+                      <span id="closeSearch" onclick="toggleSearchPanel()">&times;</span>
+                      <h1 class="search-head">Search Our Site</h1>
+                      <input type="text" id="searchInput" placeholder="Search...">
+                      <button onclick="performSearch()"><img src="./watches/icons/download (26).png"></button>
+                      <div id="searchResults" class="search-results">
+                      </div>
+                    </div>
+
+                    <div id="sidePanel" class="side-panel">
+                      <span class="close-btn" onclick="closeSidePanel()">&times;</span>
+                      <h2>Shopping Cart</h2>
+                      <div id="cartItems" class="cart-items"></div>
+                      <hr>
+                      <div id="cartTotal" class="cart-total"></div>
+                      <div class="cart-actions">
+                          <button id="checkoutButton" onclick="checkout()" class="checkout-button">Checkout</button>
+                          <button onclick="closeSidePanel()" class="close-button">Close</button>
+                      </div>
+                  </div>
+
+                    <div  class="signup-panel" id="signuppanel" style="display:none">
+                      <span id="closesignup" onclick="toggleSignupPanel()">&times;</span>
+                      <div class="singup1">
+                      <h1 class="sign-head"> SIGN UP</h1>
+                      <input type="email" id="email" placeholder="Enter your email">
+                      <input type="password" id="password" placeholder="Enter your password">
+                      <br>
+                      <a href="#" onclick="forgotPassword()">Forgot Password?</a>
+                      <button onclick="signup()">Sign Up</button>
+                      <span id="closesignup" onclick="toggleSignupPanel()">&times;</span>
+                      </div>
+                  </div>
+                  <div id="message">Logout successful!</div>
+            
+                  <div class="card-details" id="cardDetailsPage" style="display: none;">
+                    <span id="closesignup"onclick="toggleCardDetails()">&times;</span>
+                    <h2>Card Details</h2>
+                    <label for="cardNumber">Card Number:</label>
+                    <input type="number" id="cardNumber" name="cardNumber" maxlength="16">
+                    <br>
+                    <label for="cvv">CVV:</label>
+                    <input type="number" id="cvv" name="cvv" maxlength="3">
+                    <br>
+                    <button onclick="placeOrder()">Place Order</button>
+                </div>
+                <div id="confirmationContainer"></div>
+              </div>
             </div>
+        </div>
             <!-- <div class="search-panel" id="searchPanel">
         <span id="closeSearch" onclick="toggleSearchPanel()">&times;</span>
         <input type="text" id="searchInput" placeholder="Search...">

@@ -1111,18 +1111,35 @@ img {vertical-align: middle;}
         margin: 30px 5px;
     }
 }
-@media screen and (max-width:1015px) and (min-width:100px){
+@media screen and (max-width:1092px) and (min-width:100px){
     .watches1name {
-        width: 33%;
+        width: 32%;
         display: flex;
         flex-direction: column;
         margin: 30px 5px;
         flex-wrap: wrap;
-        align-items:flex-start
-        ;
+        align-items:flex-start;
         justify-content: space-around;
         align-content: center;
 
+}
+.bar{
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    margin-right:0;
+}
+.navbar a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: left;
+    padding: 9px 6px;
+    text-decoration: none;
+    justify-content: center;
 }
 }
 
