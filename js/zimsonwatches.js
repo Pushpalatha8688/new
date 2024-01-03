@@ -32,24 +32,40 @@ updateSignupIcon();
        
           cartItems.push(item);
           displayCartItems();
-         
-          updateButtonColor(true);
+
+          updateButtonAppearance(true);
+
+        openCart();
+        
 
       }
   
       updateCartIcon();
       saveCartToLocalStorage();
       // showMessage('Item added to cart!');
+
+      // updateButtonContent();
+      // updateButtonColor(true);
       
   }
 
-function updateButtonColor(isAdded) {
-  var addButton = document.getElementById('addToCartButton'); // Change 'addToCartButton' to the actual ID of your button
-  if (addButton) {
-      addButton.style.backgroundColor = isAdded ? 'green' : ''; // Change to your desired colors
-  }
-}
- 
+  function updateButtonAppearance(isAdded) {
+    var addButton = document.querySelector('.button');
+    if (addButton) {
+        if (isAdded) {
+            addButton.innerHTML = 'Added to Cart';
+            addButton.style.backgroundColor = 'green'; // Update the button color
+        } else {
+            // Reset the button appearance if needed
+            addButton.innerHTML = 'Add to Cart';
+            addButton.style.backgroundColor = 'blue'; // Update to the default color
+        }
+    }
+} 
+
+initializeCartFromLocalStorage();
+
+
   function updateCartIcon() {
       var cartIcon = document.getElementById('cartIcon');
       if (cartIcon) {
@@ -148,7 +164,7 @@ function deleteItem(index) {
     updateCartIcon();
     saveCartToLocalStorage();
     displayCartItems();
-    updateButtonColor(false);
+    
 }
 
 
@@ -407,9 +423,57 @@ var isSignedUp = false;
     function validateForm() {
           return document.getElementById('cardNumber').checkValidity() && document.getElementById('cvv').checkValidity()
   }
+  function placeOrder() {
+      if (validateForm()) {
+        cartItems = [];
+        updateCartIcon();
+        saveCartToLocalStorage();
+          alert('Order placed successfully!');
+          window.location.href = './zimson.html'; 
+      }
+  }
+
+ 
   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //   function displayOrderConfirmation() {
-//     // Create a div element for the order confirmation
+//     // Create a div element for the order confirmation  
 //     var orderConfirmationDiv = document.createElement('div');
 //     orderConfirmationDiv.classList.add('order-confirmation');
 
@@ -425,7 +489,7 @@ var isSignedUp = false;
 //     var homeButton = document.createElement('button');
 //     homeButton.innerText = 'Go to Home Page';
 //     homeButton.addEventListener('click', function () {
-//         // Redirect to the home page when the button is clicked
+//         // Redirect to the home page when the button is clicked  
 //         window.location.href = './index.html'; // Replace with the actual path to your home page
 //     });
 
@@ -442,24 +506,14 @@ var isSignedUp = false;
 
 // function placeOrder() {
 //     if (validateForm()) {
-//         cartItems = [];
+//         cartItems = [];  
 //         updateCartIcon();
 //         saveCartToLocalStorage();
 //         displayOrderConfirmation(); 
 //     }
 // }
 
-  
-  function placeOrder() {
-      if (validateForm()) {
-        cartItems = [];
-        updateCartIcon();
-        saveCartToLocalStorage();
-          alert('Order placed successfully!');
-          window.location.href = './zimson.html'; 
-      }
-  }
-  
+
   
 
 // document.addEventListener("DOMContentLoaded", function () {
